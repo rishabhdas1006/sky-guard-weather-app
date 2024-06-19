@@ -1,6 +1,43 @@
-# Getting Started with Create React App
+# Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple weather application built using React.js and the Visual Crossing Weather API from RapidAPI. This app allows users to get current weather information for any city.
+
+## Features
+
+- Fetch current weather data for any city
+- Display temperature, weather conditions, humidity, and wind speed
+- User-friendly interface with input for city names
+- Error handling for invalid city names or API errors
+
+## Screenshots
+
+![Weather App Screenshot](pic1.png)
+![Weather App Screenshot](pic2.png)
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/rishabhdas1006/sky-guard-weather-app.git
+```
+2. Install the dependencies:
+
+```bash
+npm install
+```
+3. Create a .env file in the root directory and add your RapidAPI key:
+
+```bash
+REACT_APP_RAPIDAPI_KEY = your-rapidapi-key
+```
+4. Start the development server:
+
+```bash
+npm start
+```
+
+5. Open your browser and navigate to http://localhost:3000.
 
 ## Available Scripts
 
@@ -16,18 +53,14 @@ You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in the interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Builds the app for production to the `build` folder.
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run eject`
 
@@ -39,32 +72,38 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+##Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Enter the name of the city you want to get weather information for.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Click the "Search city" button.
 
-### Code Splitting
+3. The app will display the current weather information for the specified city.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## API Reference
 
-### Analyzing the Bundle Size
+This app uses the Visual Crossing Weather API from RapidAPI. To use this API, you need an API key from RapidAPI. You can sign up and get your API key from RapidAPI.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Example API Request
 
-### Making a Progressive Web App
+```bash
+const options = {
+  method: 'GET',
+  url: 'https://visual-crossing-weather.p.rapidapi.com/forecast',
+  params: {location: 'city-name', aggregateHours: '24', contentType: 'json', unitGroup: 'metric'},
+  headers: {
+    'X-RapidAPI-Key': process.env.REACT_APP_RAPIDAPI_KEY,
+    'X-RapidAPI-Host': 'visual-crossing-weather.p.rapidapi.com'
+  }
+};
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+axios.request(options).then(response => {
+  console.log(response.data);
+}).catch(error => {
+  console.error(error);
+});
 
-### Advanced Configuration
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
