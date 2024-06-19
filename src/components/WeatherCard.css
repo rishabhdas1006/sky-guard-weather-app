@@ -1,0 +1,137 @@
+.weather-wrapper {
+	width: 100%;
+	max-width: 400px;
+	padding: 1rem;
+}
+
+.glassCard1 {
+	background: rgba(225, 225, 225, 0.18);
+	box-shadow: 8px 8px 32px 0 rgba(192, 192, 192, 2);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-radius: 10px;
+	border: 3px solid rgba(225, 225, 225, 0.18);
+}
+
+.weather-container {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	gap: 1rem;
+	margin-top: 3rem;
+	margin-bottom: 1rem;
+	justify-content: center;
+}
+
+@media (max-width: 600px) {
+	.weather-container {
+		display: flex;
+        flex-direction: column;
+		width: 100%;
+		align-items: center;
+		gap: 1rem;
+		margin-top: 3rem;
+		margin-bottom: 1rem;
+		justify-content: center;
+	}
+}
+
+.temp {
+	font-weight: bold;
+	font-size: 3rem;
+	line-height: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.place {
+	font-weight: bold;
+	text-align: center;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
+
+.date-container1 {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.date-para {
+	flex: 1 1 0%;
+	text-align: center;
+	padding: 0.5rem;
+	margin: 0px;
+}
+
+.wind-container {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+	gap: 1rem;
+}
+
+.wind-para {
+	flex: 1 1 0%;
+	text-align: center;
+	padding: 0.5rem;
+	font-weight: bold;
+	background-color: rgb(37 99 235);
+	border-radius: 0.5rem;
+	margin: 0px;
+	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.humidity-para {
+	flex: 1 1 0%;
+	text-align: center;
+	padding: 0.5rem;
+	font-weight: bold;
+	background-color: rgb(37 99 235);
+	border-radius: 0.5rem;
+	margin: 0px;
+	background-color: rgb(22 163 74);
+}
+
+.heatindex-container {
+	width: 90%;
+	height: 28px;
+	padding: 0.75rem;
+	margin-top: 1rem;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+}
+
+.heatindex-para {
+	font-weight: 600;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	margin: 0px;
+}
+
+.heatindex-para1 {
+	font-size: 1.125rem;
+	line-height: 1.75rem;
+	margin: 0px;
+}
+
+.condition {
+	width: 100%;
+	padding: 1rem;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+	font-weight: 600;
+}
+
+.hr-container {
+	background-color: rgb(71, 85, 105);
+	margin: 0px;
+}

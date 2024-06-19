@@ -1,0 +1,95 @@
+.wrapper{
+  min-height: 95vh;
+  color: white;
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.navbar{
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .navbar{
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.mainHeading{
+  font-weight: bold;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  letter-spacing: 0.025rem;
+}
+
+.inputBox{
+  background-color: white;
+  width: 14rem;
+  height: 28px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.inputField1:focus{
+  outline: none;
+}
+
+.inputField1{
+  width: 100%;
+  color: #212121;
+  font-size: 1.125rem; 
+  line-height: 1.75rem;
+  border: none;
+}
+
+.searchimage{
+  width: 1.5rem;
+  height: 1.5rem;
+  
+}
+
+
+.mainContainer{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding-top: 1rem; 
+  padding-bottom: 1rem; 
+  padding-left: 10%;
+  padding-right: 10%;
+  align-items: center;
+  justify-content: center;
+}
+
+.mini-card{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 60%;
+  gap: 2rem;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.weather-bg {
+  height: 100%;
+}
